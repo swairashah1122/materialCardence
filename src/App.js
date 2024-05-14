@@ -1,23 +1,26 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import Menu from "./pages/Menu";
-import Pagenotfound from "./pages/Pagenotfound";
+import './App.css';
+import Calculater from './components/Calculater';
+import Home from './components/Home';
+import Navbar from './components/Navbar';
+import Statistics from './components/Statistics';
+import Stackrecords from './components/Stackrecords';
+import Bottom from './components/Bottom';
+
 function App() {
   return (
-    <div>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/menu" element={<Menu />} />
-          <Route path="*" element={<Pagenotfound />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <div >    
+      <Navbar></Navbar>    
+    <Home></Home>    
+      <Calculater></Calculater>
+      <Statistics></Statistics>
+      <Stackrecords></Stackrecords>
+        <Bottom></Bottom>
+
+        
+      </div>
   );
 }
 
 export default App;
+
+
